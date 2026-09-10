@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'><rect x='9' y='5' width='30' height='38' rx='4' fill='%2315315e'/><rect x='15' y='13' width='18' height='3' rx='1.5' fill='white'/><rect x='15' y='21' width='18' height='3' rx='1.5' fill='white'/><rect x='15' y='29' width='11' height='3' rx='1.5' fill='%23e23b3b'/></svg>"/>
+<title>Lonchando Consulting LLC | Authorized Payment Agent for Americas Best Home Solutions</title>
+<meta name="description" content="Lonchando Consulting LLC is a New Jersey limited liability company providing transaction and back-office support to Americas Best Home Solutions LLC. Both companies are owned by Joseph Hernandez."/>
+<link rel="canonical" href="https://lonchandoconsulting.com/"/>
+<meta name="robots" content="index,follow"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* ══════════════════════════════════════════════════════════════════
+   LONCHANDO CONSULTING LLC — single-page verification site
+   Design tokens copied from the ABHS corporate site (pages.css) so the
+   two read as one family. Keep in sync with
+   ~/lonchando/sites/company/pages.css if that palette ever moves.
+   ══════════════════════════════════════════════════════════════════ */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --paper:#f4f7fc;
+  --card:#ffffff;
+  --ink:#16213a;
+  --ink-soft:#5b6577;
+  --line:#e2e8f2;
+  --pine:#15315e;
+  --pine-deep:#0f2444;
+  --honey:#e23b3b;
+  --honey-soft:#eaf1fb;
+  --radius:18px;
+}
+html{scroll-behavior:smooth}
+body{
+  background:var(--paper);color:var(--ink);
+  font-family:'DM Sans',system-ui,sans-serif;font-size:17px;line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:960px;margin:0 auto;padding:0 20px}
+
+/* ── TOP BAR ─────────────────────────────────────────────── */
+.topbar{padding:16px 0;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:9px;text-decoration:none}
+.brand .mark{width:30px;height:30px;flex-shrink:0}
+.brand .bn{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:19px;letter-spacing:-.4px;color:var(--pine);line-height:1}
+.brand .bn small{display:block;font-family:'DM Mono',monospace;font-weight:400;font-size:9.5px;letter-spacing:1.5px;text-transform:uppercase;color:var(--ink-soft);margin-top:2px}
+.topnav{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.topnav a{font-size:14px;font-weight:600;color:var(--ink-soft);text-decoration:none;padding:8px 10px;border-radius:10px}
+.topnav a:hover{color:var(--pine);background:#eef2f9}
+.topnav a.call{background:var(--pine);color:#fff;display:inline-flex;align-items:center;gap:6px;padding:11px 14px}
+.topnav a.call:hover{background:var(--pine-deep);color:#fff}
+@media (max-width:520px){ .topnav a{font-size:13px;padding:9px 8px} .topnav a.call{padding:11px 12px} }
+
+/* ── HERO ────────────────────────────────────────────────── */
+.hero{padding:40px 0 6px}
+.hero .eyebrow{display:inline-flex;align-items:center;gap:6px;font-family:'DM Mono',monospace;font-size:11px;letter-spacing:1.6px;text-transform:uppercase;color:var(--honey);font-weight:500}
+.hero h1{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:clamp(30px,5.6vw,48px);line-height:1.06;letter-spacing:-1.1px;color:var(--pine);margin:11px 0 14px}
+.hero .lead{font-size:19px;color:var(--ink-soft);max-width:60ch}
+
+/* ── CARDS ───────────────────────────────────────────────── */
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:30px 32px;margin:26px 0}
+.card h2{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:24px;letter-spacing:-.5px;color:var(--pine);margin:0 0 12px}
+.card p{margin:0 0 13px;color:var(--ink)}
+.card p:last-child{margin-bottom:0}
+.card .eyebrow{display:inline-flex;align-items:center;gap:6px;font-family:'DM Mono',monospace;font-size:11px;letter-spacing:1.6px;text-transform:uppercase;color:var(--honey);font-weight:500;margin-bottom:9px}
+
+/* the verification card is the reason this page exists — give it weight */
+.verify{border-left:5px solid var(--honey);background:var(--card)}
+.checks{list-style:none;margin:6px 0 0}
+.checks li{position:relative;padding:0 0 0 30px;margin:0 0 13px;color:var(--ink)}
+.checks li:last-child{margin-bottom:0}
+.checks li::before{
+  content:"";position:absolute;left:0;top:8px;width:16px;height:16px;border-radius:50%;
+  background:var(--honey-soft);border:2px solid var(--pine);
+}
+.checks li strong{color:var(--pine)}
+
+.nots{list-style:none;margin:6px 0 0}
+.nots li{position:relative;padding:0 0 0 22px;margin:0 0 10px;color:var(--ink-soft)}
+.nots li:last-child{margin-bottom:0}
+.nots li::before{content:"—";position:absolute;left:0;color:var(--honey);font-weight:600}
+
+/* ── TWO-COMPANY GRID ────────────────────────────────────── */
+.pair{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:16px;margin:26px 0}
+.co{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:24px 26px}
+.co .role{font-family:'DM Mono',monospace;font-size:11.5px;letter-spacing:.8px;text-transform:uppercase;color:var(--honey);font-weight:500}
+.co h3{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:19.5px;color:var(--pine);margin:8px 0 7px;letter-spacing:-.4px}
+.co p{font-size:15.5px;color:var(--ink-soft);margin:0}
+.co .state{display:block;font-family:'DM Mono',monospace;font-size:12px;color:var(--ink-soft);margin-top:10px}
+
+/* ── CONTACT ─────────────────────────────────────────────── */
+.contact{display:flex;gap:14px;flex-wrap:wrap;margin-top:4px}
+.btn{display:inline-flex;align-items:center;gap:7px;text-decoration:none;font-weight:700;font-size:16px;padding:13px 20px;border-radius:12px;
+     /* the email button carries a 35-character address; let it break rather
+        than push the page sideways on a narrow phone */
+     max-width:100%;overflow-wrap:anywhere;text-align:center}
+.btn.primary{background:var(--pine);color:#fff}
+.btn.primary:hover{background:var(--pine-deep)}
+.btn.ghost{background:#eef2f9;color:var(--pine)}
+.btn.ghost:hover{background:#e3eaf6}
+.note{font-size:14.5px;color:var(--ink-soft);margin-top:13px}
+
+/* ── FOOTER ──────────────────────────────────────────────── */
+.foot{margin-top:40px;padding:28px 0 46px;border-top:1px solid var(--line);text-align:center}
+.foot .fb{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:17px;color:var(--pine);letter-spacing:-.3px}
+.foot .fcontact{font-size:14.5px;color:var(--ink-soft);margin-top:8px;font-style:normal}
+.foot .fentity{font-family:'DM Mono',monospace;font-size:12.5px;letter-spacing:.3px}
+.foot .fcontact a{color:var(--pine);text-decoration:none;font-weight:600}
+.foot .fcontact a:hover{text-decoration:underline}
+.foot .legal{font-size:12.5px;color:var(--ink-soft);line-height:1.65;max-width:74ch;margin:16px auto 0;text-align:left}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="topbar">
+    <a class="brand" href="/">
+      <svg class="mark" viewBox="0 0 48 48" aria-hidden="true">
+        <rect x="9" y="5" width="30" height="38" rx="4" fill="#15315e"/>
+        <rect x="15" y="13" width="18" height="3" rx="1.5" fill="#fff"/>
+        <rect x="15" y="21" width="18" height="3" rx="1.5" fill="#fff"/>
+        <rect x="15" y="29" width="11" height="3" rx="1.5" fill="#e23b3b"/>
+      </svg>
+      <span class="bn">Lonchando Consulting<small>Transaction &amp; back-office support</small></span>
+    </a>
+    <nav class="topnav">
+      <a href="https://americasbesthomesolutions.com">Americas Best Home Solutions</a>
+      <a class="call" href="tel:+15515509906">(551) 550-9906</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <span class="eyebrow">New Jersey limited liability company</span>
+    <h1>Lonchando Consulting LLC</h1>
+    <p class="lead">
+      We handle transaction and back-office support for
+      <strong>Americas Best Home Solutions LLC</strong> — including receiving
+      customer payments as its authorized agent. Both companies are owned by
+      Joseph Hernandez.
+    </p>
+  </section>
+
+  <section class="card verify">
+    <span class="eyebrow">Verifying a payment?</span>
+    <h2>Yes — this is the right company.</h2>
+    <p>
+      If our name is on your payment instructions and you wanted to check that
+      it belongs where your contract says, here is exactly how it works:
+    </p>
+    <ul class="checks">
+      <li><strong>Your contract is with Americas Best Home Solutions LLC.</strong> That company is your seller, and nothing about this changes that.</li>
+      <li><strong>We receive your payment as its authorized agent</strong>, under a written agreement signed between the two companies.</li>
+      <li><strong>Your payment is credited to your contract in full</strong> on the day we receive it. We take no fee and no deduction out of it.</li>
+      <li><strong>You get a written receipt the same day</strong>, naming the property and the amount.</li>
+      <li><strong>Both companies are owned by the same person</strong> — Joseph Hernandez is the sole member of each.</li>
+      <li><strong>You can read the agreement.</strong> Ask us and we will send you a copy. No reason to take our word for it.</li>
+    </ul>
+    <div class="contact" style="margin-top:22px">
+      <a class="btn primary" href="tel:+15515509906">Call (551) 550-9906</a>
+      <a class="btn ghost" href="mailto:admin@americasbesthomesolutions.com?subject=Payment%20verification%20%E2%80%94%20Lonchando%20Consulting">Email us</a>
+    </div>
+  </section>
+
+  <section class="card">
+    <span class="eyebrow">Plain language</span>
+    <h2>What we are not</h2>
+    <p>Worth being just as clear about the other direction:</p>
+    <ul class="nots">
+      <li>We are <strong>not</strong> a bank, a lender, or a mortgage broker.</li>
+      <li>We are <strong>not</strong> an escrow agent or a title company, and we hold no money in trust for you.</li>
+      <li>We are <strong>not</strong> a party to your contract, and we take on none of the seller's obligations under it.</li>
+      <li>Americas Best Home Solutions LLC stays responsible to you for everything your contract promises — <strong>including any refund you are entitled to.</strong></li>
+    </ul>
+  </section>
+
+  <section>
+    <div class="pair">
+      <div class="co">
+        <span class="role">The seller</span>
+        <h3>Americas Best Home Solutions LLC</h3>
+        <p>Buys residential property and sells it with owner financing. This is the company named in your contract.</p>
+        <span class="state">A Wyoming LLC · americasbesthomesolutions.com</span>
+      </div>
+      <div class="co">
+        <span class="role">The back office</span>
+        <h3>Lonchando Consulting LLC</h3>
+        <p>Handles transaction support and receives payments on the seller's behalf. Takes no fee for it.</p>
+        <span class="state">A New Jersey LLC · lonchandoconsulting.com</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="card">
+    <span class="eyebrow">Contact</span>
+    <h2>Talk to a person</h2>
+    <p>
+      Same phone and same inbox as Americas Best Home Solutions — one back
+      office serves both companies, which is the whole point of this one.
+    </p>
+    <div class="contact">
+      <a class="btn primary" href="tel:+15515509906">(551) 550-9906</a>
+      <a class="btn ghost" href="mailto:admin@americasbesthomesolutions.com">admin@americasbesthomesolutions.com</a>
+    </div>
+    <p class="note">
+      Questions about a specific property, your terms, or your balance go to
+      Americas Best Home Solutions — it holds the contract. Questions about
+      where a payment went, or a receipt you did not get, come to us.
+    </p>
+  </section>
+
+  <footer class="foot">
+    <div class="fb">Lonchando Consulting</div>
+    <p class="fcontact fentity">Lonchando Consulting LLC · a New Jersey limited liability company</p>
+    <!-- TODO(Joe): Consulting's registered business address goes here, in an
+         <address> block matching the ABHS site. Left out deliberately rather
+         than guessed — do not publish an address we have not confirmed, and do
+         not reuse the ABHS Wyoming registered-agent address, which is not this
+         company's address. -->
+    <address class="fcontact">
+      <a href="tel:+15515509906">(551) 550-9906</a> · <a href="mailto:admin@americasbesthomesolutions.com">admin@americasbesthomesolutions.com</a>
+    </address>
+    <p class="fcontact flinks">
+      <a href="https://americasbesthomesolutions.com">Americas Best Home Solutions</a>
+    </p>
+    <p class="legal">
+      © 2026 Lonchando Consulting LLC. Lonchando Consulting LLC provides
+      transaction and back-office services to Americas Best Home Solutions LLC
+      and receives payments as its authorized agent under a written agreement
+      between the two companies. Both companies are owned by Joseph Hernandez.
+      Lonchando Consulting LLC is not a bank, mortgage lender, licensed
+      mortgage broker, escrow agent, or title company; it holds no funds in
+      trust for any customer, is not a party to any purchase or financing
+      contract, and assumes none of the seller's obligations. Nothing on this
+      page is an offer or commitment to lend, or legal, tax, or financial
+      advice. Equal Housing Opportunity.
+    </p>
+  </footer>
+
+</div>
+</body>
+</html>
